@@ -1,0 +1,75 @@
+/* Basic styling for the body */
+body {
+    background-color: #2c2f33; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* White text color */
+}
+
+/* Calculator container */
+.calculator {
+    background-color: #36393f; /* Slightly lighter dark background for the calculator itself */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    width: 320px;
+}
+
+/* Display area */
+.display {
+    background-color: #23272a;
+    color: #ffffff;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Buttons grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px; /* Spacing between buttons */
+}
+
+/* Base button styling */
+button {
+    background-color: #4a4e53;
+    color: #ffffff;
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #5c6066;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Specific button styles */
+.clear, .backspace, .percent {
+    background-color: #6a6e73;
+}
+
+.operator {
+    background-color: #7289da; /* A pleasing purple-blue color */
+}
+
+.equal {
+    background-color: #5865f2; /* A slightly different shade of purple-blue */
+    grid-column: span 2; /* This makes the equals button span two columns */
+}
